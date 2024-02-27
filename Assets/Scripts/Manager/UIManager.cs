@@ -28,15 +28,7 @@ public class UIManager : MonoBehaviour {
         if(int.TryParse(input.text, out int x))
         {
             Debug.Log(x);
-            if(x < 1 || x > 10)
-            {
-                logError.gameObject.SetActive(true);
-                logError.text = "There's no level" + input.text;
-            }
-            else
-            {
-                gameManager.StartGame(x);
-            }
+            gameManager.StartGame(x);
 
         }
         else
@@ -48,5 +40,11 @@ public class UIManager : MonoBehaviour {
     public void SetCurrentLevel(string x)
     {
         currentLevel.text = "Level " + x;
+    }
+
+    public void SetLogError(string log)
+    {
+        logError.gameObject.SetActive(true);
+        logError.text = "Tidak ada level " + log;
     }
 }

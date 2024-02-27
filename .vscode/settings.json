@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Armadino.sln"
+    "dotnet.defaultSolution": "Armadin0.sln"
 }

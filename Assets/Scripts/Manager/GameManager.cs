@@ -20,8 +20,10 @@ public class GameManager : MonoBehaviour
     public int crouch {get; set;}
     private float time;
     public static int PlayOnLevel {get; set;}
+    public static bool i;
 
     private void Awake() {
+        i = false;
         if(PlayOnLevel == 0) PlayOnLevel = playOnLevel;
         StartGame(PlayOnLevel);
         uIManager.SetCurrentLevel(PlayOnLevel.ToString());
@@ -33,10 +35,6 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(int level)
     {
-        PlayOnLevel = level;
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
         foreach (var item in levelManagers)
         {
             LevelDictionary[item.Level] = item;
@@ -44,22 +42,26 @@ public class GameManager : MonoBehaviour
 
         if(LevelDictionary.ContainsKey(level))
         {
+            PlayOnLevel = level;
+            i = true;
             PlayerController.start = LevelDictionary[level].transform;
             PlayerController.finish = LevelDictionary[level].Finish;
+            currentPhase = EnumManager.Phase.START;
         }
         else
         {
+            i = false;
+            uIManager.SetLogError(level.ToString());
             Debug.LogError("Integer is not readable. Only 1-10 are available");
         }
 
-        currentPhase = EnumManager.Phase.START;
     }
 
     void GameSetting(EnumManager.Phase phase)
     {
         if(phase == EnumManager.Phase.GAMEOVER)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            RestartScene();
             attempt++;
         }
 
@@ -86,5 +88,10 @@ public class GameManager : MonoBehaviour
     public void BackToMain()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void RestartScene()
+    {
+        if(i == true) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
