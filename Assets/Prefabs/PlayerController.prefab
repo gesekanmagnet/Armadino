@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006827666260802986}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.1, y: 3.5, z: -10}
+  m_LocalPosition: {x: 4.5, y: 3.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -130,8 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4bd937ee3cc9244af46a9e5729ee13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   player: {fileID: 1006827667382759665}
-  BreakDistance: 0
+  BreakDistance: 30
+  JumpForce: 10
 --- !u!1 &1006827667382759668
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006827667382759668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.6, y: -3.46, z: 0}
+  m_LocalPosition: {x: -20, y: -3.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -263,7 +265,7 @@ ConstantForce2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006827667382759668}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Force: {x: 5, y: 0}
   m_RelativeForce: {x: 0, y: 0}
   m_Torque: 0

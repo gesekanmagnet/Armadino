@@ -7,4 +7,15 @@ public class SceneSelect : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+
+    private void Awake() {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Update() {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }

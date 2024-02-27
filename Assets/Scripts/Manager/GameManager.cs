@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     private Dictionary<int, LevelManager> LevelDictionary = new Dictionary<int, LevelManager>();
 
-    public static int attempt;
+    public static int attempt {get; set;}
     public int jump {get; set;}
     public int crouch {get; set;}
     private float time;
@@ -93,5 +93,10 @@ public class GameManager : MonoBehaviour
     public void RestartScene()
     {
         if(i == true) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ResetAttempt()
+    {
+        attempt = 0;
     }
 }

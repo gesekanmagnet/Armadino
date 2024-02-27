@@ -23,13 +23,12 @@ public class UIManager : MonoBehaviour {
         Time.text = string.Format("{0:00}:{1:00}", ts.Minutes, ts.Seconds);
     }
 
-    public void SetLevel(InputField input)
+    public void SetLevel(Text input)
     {
         if(int.TryParse(input.text, out int x))
         {
             Debug.Log(x);
             gameManager.StartGame(x);
-
         }
         else
         {

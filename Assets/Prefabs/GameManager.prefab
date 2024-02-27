@@ -47,7 +47,10 @@ MonoBehaviour:
   playOnLevel: 1
   levelManagers:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   uIManager: {fileID: 0}
-  jump: 0
-  crouch: 0
-  time: 0

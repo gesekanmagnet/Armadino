@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 05d0d9879f2751c4f80133021af9b4b6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Azmi.unity
     guid: 3cd94cae4db1c014eb98f2886f79ea61
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Eka.unity
     guid: 200d4bc4adc5aff4c90f44818ade5c41
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gregorius.unity
     guid: d9f8a0382dd81294fbd3e4ae61d5d847
   - enabled: 1
@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Steven.unity
     guid: a79ce87c2aebfe042a3a64f7e54d4d1b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sulthon.unity
     guid: 3faec86010873e24392b3198337bb6e3
   - enabled: 1
