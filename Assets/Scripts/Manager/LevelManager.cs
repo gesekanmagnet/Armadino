@@ -3,7 +3,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
     [SerializeField] private Transform finish;
 
-    [Range(1, 10)]
+    [Range(1, 20)]
     [SerializeField] private int level;
 
     public Transform Finish {get; private set;}

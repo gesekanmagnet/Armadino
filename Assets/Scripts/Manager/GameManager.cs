@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static EnumManager.Phase currentPhase;
 
-    [Range(1, 10)]
+    [Range(1, 20)]
     public int playOnLevel;
 
     public List<LevelManager> levelManagers;

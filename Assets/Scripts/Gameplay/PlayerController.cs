@@ -17,13 +17,14 @@ public class PlayerController : MonoBehaviour
     public static bool canJump;
 
     private void Start() {
+        // if(start == null) return;
         transform.position = start.position;
         player.transform.parent = null;
         breakDistance = finish.localPosition.x - Mathf.Abs(BreakDistance);
     }
 
     private void Update() {
-        player.AddForce(new Vector2(2, 0), ForceMode2D.Force);
+        // player.AddForce(new Vector2(2, 0), ForceMode2D.Force);
 
         if(player.transform.localPosition.x >= 0 && transform.position.x <= breakDistance)
         {
