@@ -1,2 +1,2 @@
 # Armadino
-MMTC Game Technology Semester 6 Level Design course
+MMTC Game Technology Semester 6 Level Design Course
